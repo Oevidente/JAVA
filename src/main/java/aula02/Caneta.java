@@ -15,7 +15,7 @@ public class Caneta {
   }
   
   public void rabiscar() {
-    if (this.tampada === true) {
+    if (this.tampada == true) {
       System.out.println("ERRO! Não posso rabiscar.");
     } else {
       System.out.println("Estou rabiscando.");
@@ -27,10 +27,22 @@ public class Caneta {
   public void destampar() {
     this.tampada = false;
   }  
-  public void getModelo() {
-    return this.modelo;
-  }
   public void setModelo(String modelo) {
     this.modelo = modelo;
+  }
+  public String getModelo() {
+    return this.modelo;
+  }
+  public void setPonta(float ponta) {
+    this.ponta = ponta;
+  }
+  public float getPonta() {
+    return this.ponta;
+  }
+  public String getCor() {
+    return this.cor;
+  }
+  public void setCor(String cor) {
+    this.cor = cor;
   }
 }
