@@ -22,6 +22,6 @@ public class Estante {
   }
   
   public void getTotDoc() {
-    System.out.println(totDoc);
+    
   }
 }

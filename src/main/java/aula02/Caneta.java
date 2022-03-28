@@ -27,4 +27,10 @@ public class Caneta {
   public void destampar() {
     this.tampada = false;
   }  
+  public void getModelo() {
+    return this.modelo;
+  }
+  public void setModelo(String modelo) {
+    this.modelo = modelo;
+  }
 }
