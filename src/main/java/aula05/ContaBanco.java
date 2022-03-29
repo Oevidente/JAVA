@@ -8,6 +8,15 @@ public class ContaBanco {
   private float saldo;
   private boolean status;
   
+  public void estadoAtual() {
+    System.out.println("--------------------------------");
+    System.out.println("Conta: " + this.getNumConta());
+    System.out.println("Tipo: " + this.getTipo());
+    System.out.println("Dono: " + this.getDono());
+    System.out.println("Saldo: " + this.getSaldo());
+    System.out.println("Status: " + this.getStatus());
+  }
+
   public ContaBanco() {
     this.setSaldo(0);
     this.setStatus(false);
@@ -37,36 +46,37 @@ public class ContaBanco {
   public void depositar(float valor) {
     if (this.getStatus() == true) {
       this.setSaldo(this.getSaldo() + valor);
-      System.out.println("Depósito realizado com sucesso na conta de " + this.getDono());
+      System.out.println("Depósito realizado na conta de " + this.getDono());
     } else {
-      System.out.println("ERRO! Impossível depositar");
+      System.out.println("ERRO! Impossível depositar em uma conta fechada");
     }
   }
   public void sacar(float valor) {
     if(getStatus() == true) {
       if(getSaldo() >= valor) {
         setSaldo(getSaldo()-valor);
-        System.out.println("Saque realizado com sucesso!");
+        System.out.println("Saque realizado na conta de " + this.getDono());
       }
       else {
       System.out.println("ERRO! Não foi possível realizar o saque! Saldo insuficiente.");
       }
     } else {
-      System.out.println("ERRO! Impossível sacar");
+      System.out.println("ERRO! Impossível sacar em uma conta fechada");
     }
   }
   public void pagarMensal() {
     /*cc conta corrente
     cp conta poupança */
-    float valor;
-    if (getTipo() == "cc") {
+    int valor = 0;
+    if (this.getTipo() == "cc") {
       valor = 12;
-    } else if (getTipo() == "cp") {
+    } else if (this.getTipo() == "cp") {
       valor = 20;
     }
-    if (getStatus() == true) {
-      if (getSaldo() >= valor) {
-        setSaldo(getSaldo() - valor);
+    if (this.getStatus() == true) {
+      if (this.getSaldo() >= valor) {
+        this.setSaldo(this.getSaldo() - valor);
+        System.out.println("Mensalidade paga com sucesso por " + this.getDono());
       } else {
         System.out.println("Saldo insuficiente");
       }
