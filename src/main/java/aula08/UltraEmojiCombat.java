@@ -10,7 +10,24 @@ public class UltraEmojiCombat {
    l[3] = new Lutador("Dead Code", "Austrália", 28, 1.93f, 81.6f, 13, 0, 2);
    l[4] = new Lutador("UF0Cobol", "Brasil", 37, 1.70f, 117.3f, 5, 4, 3);
    l[5] = new Lutador("Nerdaart", "EUA", 30, 1.81f, 105.7f, 12, 2, 4);
-   l[5].apresentar();
+
+   /*---------------------------------*/
+
+   Luta UEC01 = new Luta();
+   Luta UEC02 = new Luta();
+   Luta UEC03 = new Luta();
+   UEC01.marcarLuta(l[4],l[5]);
+   UEC01.lutar();
+   UEC02.marcarLuta(l[2],l[3]);
+   UEC02.lutar();
+   UEC02.marcarLuta(l[0],l[1]);
+   UEC02.lutar();
+   UEC01.marcarLuta(l[4],l[5]);
+   UEC01.lutar();
+   UEC02.marcarLuta(l[2],l[3]);
+   UEC02.lutar();
+   UEC02.marcarLuta(l[0],l[1]);
+   UEC02.lutar();
   }
 
 }

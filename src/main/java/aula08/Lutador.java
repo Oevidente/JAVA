@@ -25,7 +25,7 @@ public class Lutador {
   }
 
   //Métodos especiais
-  private String getNome() {
+  public String getNome() {
       return nome;
   }
 
@@ -33,7 +33,7 @@ public class Lutador {
       this.nome = nome;
   }
 
-  private String getNacionalidade() {
+  public String getNacionalidade() {
       return nacionalidade;
   }
 
@@ -41,7 +41,7 @@ public class Lutador {
       this.nacionalidade = nacionalidade;
   }
 
-  private int getIdade() {
+  public int getIdade() {
       return idade;
   }
 
@@ -49,7 +49,7 @@ public class Lutador {
       this.idade = idade;
   }
 
-  private float getAltura() {
+  public float getAltura() {
       return altura;
   }
 
@@ -57,16 +57,16 @@ public class Lutador {
       this.altura = altura;
   }
 
-  private float getPeso() {
+  public float getPeso() {
       return peso;
     }
     
-    private void setPeso(float peso) {
-      this.peso = peso;
-      setCategoria();
+  private void setPeso(float peso) {
+    this.peso = peso;
+    setCategoria();
   }
 
-  private String getCategoria() {
+  public String getCategoria() {
       return categoria;
   }
   private void setCategoria() {
